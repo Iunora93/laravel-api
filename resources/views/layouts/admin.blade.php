@@ -102,6 +102,15 @@
                       Progetti
                     </a>
                   </li>
+                  <li class="nav-item">
+                    <a
+                      class="nav-link text-white {{ Route::currentRouteName() == 'admin.types.index' ? 'bg-secondary' : '' }}"
+                      href="{{route('admin.types.index')}}"
+                    >
+                      <i class="fa-solid fa-tachometer-alt fa-lg fa-fw"></i>
+                      Tipi
+                    </a>
+                  </li>
               </ul>
             </div>
           </nav>
