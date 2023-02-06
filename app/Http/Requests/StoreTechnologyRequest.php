@@ -24,7 +24,7 @@ class StoreTechnologyRequest extends FormRequest
     public function rules()
     {
         return [
-            //
+            'name' => 'required|string|unique:technologies|max:100'
         ];
     }
 }
