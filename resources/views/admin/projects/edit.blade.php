@@ -17,10 +17,10 @@
     <div class="mt-4">
         <form action="{{ route('admin.projects.update', $project) }}" method="POST" enctype="multipart/form-data">
             @csrf
-            <select class="form-select" name="types_id" id="types_id">
+            <select class="form-select" name="type_id" id="type_id">
                 <option value="">Nessun tipo</option>
                  @foreach ($types as $type)
-                    <option value="{{$type->id}}" {{old('types_id', $project->types?->id) == $type->id ? 'selected' : ''}}>{{$type->name}}</option>
+                    <option value="{{$type->id}}" {{old('type_id', $project->type?->id) == $type->id ? 'selected' : ''}}>{{$type->name}}</option>
                  @endforeach
                 
                 

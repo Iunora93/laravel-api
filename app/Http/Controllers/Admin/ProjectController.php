@@ -7,7 +7,7 @@ use App\Http\Controllers\Controller;
 use App\Http\Requests\StoreProjectRequest;
 use App\Http\Requests\UpdateProjectRequest;
 use App\Models\Technology;
-use App\Models\Types;
+use App\Models\Type;
 use Illuminate\Support\Str;
 use Illuminate\Support\Facades\Storage;
 
@@ -33,7 +33,7 @@ class ProjectController extends Controller
      */
     public function create()
     {
-        $types = Types::all();
+        $types = Type::all();
         $technologies = Technology::all();
         return view('admin.projects.create', compact('types', 'technologies'));
     }
@@ -83,7 +83,7 @@ class ProjectController extends Controller
 
     {
         $technologies = Technology::all();
-        $types = Types::all();
+        $types = Type::all();
 
         return view('admin.projects.edit', compact('project', 'types', 'technologies'));
     }

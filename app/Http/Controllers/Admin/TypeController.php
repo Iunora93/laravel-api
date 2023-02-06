@@ -2,12 +2,12 @@
 
 namespace App\Http\Controllers\Admin;
 
-use App\Models\Types;
-use App\Http\Requests\StoreTypesRequest;
-use App\Http\Requests\UpdateTypesRequest;
 use App\Http\Controllers\Controller;
+use App\Models\Type;
+use App\Http\Requests\StoreTypeRequest;
+use App\Http\Requests\UpdateTypeRequest;
 
-class TypesController extends Controller
+class TypeController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -32,10 +32,10 @@ class TypesController extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \App\Http\Requests\StoreTypesRequest  $request
+     * @param  \App\Http\Requests\StoreTypeRequest  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(StoreTypesRequest $request)
+    public function store(StoreTypeRequest $request)
     {
         //
     }
@@ -43,10 +43,10 @@ class TypesController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Types  $types
+     * @param  \App\Models\Type  $type
      * @return \Illuminate\Http\Response
      */
-    public function show(Types $types)
+    public function show(Type $type)
     {
         //
     }
@@ -54,10 +54,10 @@ class TypesController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\Types  $types
+     * @param  \App\Models\Type  $type
      * @return \Illuminate\Http\Response
      */
-    public function edit(Types $types)
+    public function edit(Type $type)
     {
         //
     }
@@ -65,11 +65,11 @@ class TypesController extends Controller
     /**
      * Update the specified resource in storage.
      *
-     * @param  \App\Http\Requests\UpdateTypesRequest  $request
-     * @param  \App\Models\Types  $types
+     * @param  \App\Http\Requests\UpdateTypeRequest  $request
+     * @param  \App\Models\Type  $type
      * @return \Illuminate\Http\Response
      */
-    public function update(UpdateTypesRequest $request, Types $types)
+    public function update(UpdateTypeRequest $request, Type $type)
     {
         //
     }
@@ -77,10 +77,10 @@ class TypesController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Types  $types
+     * @param  \App\Models\Type  $type
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Types $types)
+    public function destroy(Type $type)
     {
         //
     }
