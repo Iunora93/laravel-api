@@ -10,7 +10,7 @@ class ProjectController extends Controller
 {
     public function index()
     {
-        $projects = Project::with('types', 'technologies')->get();
+        $projects = Project::with('type', 'technologies')->get();
 
         return $projects;
     }
@@ -18,7 +18,7 @@ class ProjectController extends Controller
 {
 
     try {
-        $project = Project::where('slug', $slug)->with('types', 'technologies')->firstOrFail();
+        $project = Project::where('slug', $slug)->with('type', 'technologies')->firstOrFail();
         return $project;
     } catch (\Illuminate\Database\Eloquent\ModelNotFoundException $e) {
 
